@@ -1,5 +1,7 @@
 # 🎉 Mini Fun Project – QR Code for T-Shirts
 
+A Docker-hosted mini fun project for dabblers: users register via email, upload media (photo/GIF/video), get a custom QR code (designed for T-shirt prints) linking to a fullscreen rotating display with preview, visit tracking, and an about page for guidance.
+
 This is a fun mini project designed for dabblers → people who casually invest effort into quirky or even “pointless” pursuits.  
 The idea is to generate custom QR codes that look stylish on T-shirt prints and link to a personalized media page.
 
