@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload</title>
+  </head>
+  <body>
+    <div class="form">
+      <form action="">
+        <!--Single or multiple Images-->
+        <hr />
+        <h3>Number of images</h3>
+        <label for="category">Single Image</label>
+        <input name="category" type="radio" />
+        <label for="category">Multiple Images</label>
+        <input name="category" type="radio" />
+
+        <!--Media Type -->
+        <h3>Image Type</h3>
+        <label for="mediaType">Image</label>
+        <input name="mediaType" type="radio" />
+        <label for="mediaType">Video</label>
+        <input name="mediaType" type="radio" />
+        <label for="mediaType">GIF</label>
+        <input name="mediaType" type="radio" />
+
+        <!-- Upload Media -->
+        <hr />
+        <h3>Upload Media</h3>
+        <label for="upload">Upload Media</label>
+        <input
+          id="mediaInput"
+          name="upload"
+          type="file"
+          accept="image/*,video/*,.gif"
+          multiple
+        />
+
+        <!-- Button -->
+        <hr />
+        <button onsubmit="getData()" id="Submit">Submit</button>
+      </form>
+    </div>
+    <script>
+      function getData() {
+        /*
+            // Get the single or multiple media data
+            const category = "";
+            const categoryRadios = document.getElementsByName("category");
+            console.log(radios);
+
+            for (let i = 0; i < radios.length; i++) {
+              category = categoryRadios[i].checked;
+              // .checked is a property of input elements of type radio or checkbox returns boolean.
+              break;
+            } */
+
+        // Get the Media Type
+        const mediaType = "";
+        const mediaTypeRadios = document.getElementsByName("mediaType");
+        for (let i = 0; i < mediaTypeRadios.length; i++) {
+          mediaType = mediaTypeRadios[i].checked; // .checked is a property of input elements of type radio or checkbox returns boolean.
+        }
+
+        // Get number of file uploads and files
+        const nOfUploads = files.length;
+        const mediaInput = document.getElementById("mediaInput");
+        const files = mediaInput.files; // Stores a json format containing file:name, type, size etc..
+
+        // Display Preview Element
+        if (nOfUploads !== 0) {
+          const previewUrl = URL.createObjectURL(fiels[0]); // create a temporary URL
+
+          if (file.type.startsWith("image/")) {
+            return (
+              <div className="preview">
+                <img src={previewUrl} alt="Preview" />
+              </div>
+            );
+          } else if (file.type.startsWith("video/")) {
+            return (
+              <div className="preview">
+                <video src={previewUrl} autoPlay muted loop />
+              </div>
+            );
+          } else {
+            return (
+              <div className="preview">
+                <p>Unsupported file type</p>
+              </div>
+            );
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
