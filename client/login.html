@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="login">
+      <form action="" id="loginForm">
+        <label for="email">User Email</label>
+        <input name="email" type="email" />
+        <label for="password">User Password</label>
+        <input type="password" />
+        <button type="submit">Login</button>
+      </form>
+      <script>
+        document
+          .getElementById("loginForm")
+          .addEventListener("submit", async (event) => {
+            event.preventDefault();
+
+            if (userpassword !== userConfirmedPassword) {
+              console.log("Login Failed !");
+            } else {
+              console.log("Login Successfull !");
+            }
+          });
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="registerForm">
+      <form action="">
+        <input type="text" id="userName" placeholder="Unique User Name" />
+        <input type="email" id="email" placeholder="no-reply@gmail.com" />
+        <input type="password" id="password" placeholder="********" />
+        <input type="password" id="confirmPassword" placeholder="********" />
+        <input type="checkbox" id="terms" required />
+        <label for="terms">
+          I agree to the
+          <a href="terms&conditions.html" target="_blank">Terms & Conditions</a>
+        </label>
+        <button type="submit">Register</button>
+      </form>
+    </div>
+    <script>
+      document
+        .getElementById("registerForm")
+        .addEventListener("submit", async (event) => {
+          event.preventDefault();
+
+          const userName = document.getElementById("userName").value;
+          const userEmail = document.getElementById("email").value;
+          const userpassword = document.getElementById("password").value;
+          const userConfirmedPassword =
+            document.getElementById("confirmPassword").value;
+        });
+    </script>
+  </body>
+</html>
